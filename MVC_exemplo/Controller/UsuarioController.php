@@ -29,4 +29,16 @@ class UsuarioController {
        echo "</pre>";
        require 'View/usuarioListar.php';
    }
+
+   public function telaEditar(){
+    $usuario = Usuario::buscar($_GET['id']);//o GET deixa salvo as informações na URL
+    require 'View/usuarioEditar.php';
+   }
+
+   public function atualizar(){
+    $usuario = new Usuario($_POST['nome'], $_POST['email']);
+    $usuario->atualizar($_GET['id']);
+    header('Location: /pbe_php/MVC_EXEMPLO/usuario/telaEditar?id=' .($_GET['id']));
+    exit;
+   }
 }

@@ -6,7 +6,7 @@
     <title>Formulário Cadastro</title>
 </head>
 <body>
-    <a href= "pbe_php/MVCExemplo/usuario/telaCadastro">ir para tela cadastrar
+    <a href= "listar">ir para tela Listar</a>
     <form method="POST" action="salvar">
         <input type= "text" name="nome" placeholder= "Seu nome" require>
         <input type= "text" name="email" placeholder= "Seu email" require>
